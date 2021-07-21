@@ -21,8 +21,7 @@ function App() {
       id: uuid(),
       ...NewContactArray,
     };
-    //console.log('sendRequest received');
-    //console.log(sendRequest);
+
     const RequestResponse = await axios.post("/contactarray", sendRequest);
     console.log(RequestResponse);
     ContactArrayFunc([...ContactArray, RequestResponse.data]);
